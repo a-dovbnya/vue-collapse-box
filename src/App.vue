@@ -4,7 +4,7 @@
       <div class="collapse-block__head" @click="isActive = !isActive">
         Header
       </div>
-      <collapse-box :open="isActive" :duration="0.75">
+      <collapse-box :open="isActive" :duration="0.75" timingFunction="linear">
         <div class="collapse-block__body">
           Some Content
         </div>

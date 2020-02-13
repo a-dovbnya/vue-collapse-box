@@ -6,7 +6,7 @@
     v-on:before-leave="beforeLeave"
     v-on:leave="transitionLeave"
   >
-    <div v-show="open" class="collapse-content">
+    <div v-show="open" :style="collapseStyles">
       <div>
         <slot></slot>
       </div>
@@ -22,6 +22,12 @@ export default {
     open: {
       type: Boolean,
       default: false
+    },
+    duration: {
+      type: Number
+    },
+    timingFunction: {
+      type: String,
     }
   },
   methods: {
@@ -55,12 +61,20 @@ export default {
 
       setTimeout(() => { done() }, duration)
     }
+  },
+  computed: {
+    collapseStyles () {
+      const duration = this.duration || '0.25'
+      const timingFunction = this.timingFunction || 'linear'
+
+      return (
+        `
+          will-change: contents;
+          transition-duration: ${duration}s;
+          transition-timing-function: ${timingFunction};
+        `
+      )
+    }
   }
 }
 </script>
-<style>
-.collapse-content {
-  will-change: contents;
-  transition: 0.15s linear;
-}
-</style>
