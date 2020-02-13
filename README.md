@@ -1,4 +1,16 @@
 # vue-collapse-box
+Компонент collapse-box используется для анимационного открытия скрытого блока
+
+## Пример
+```
+<template>
+    <collapse-box :open="isActive" :duration="0.75">
+        <div class="collapse-block__body">
+            Some Content
+        </div>
+    </collapse-box>
+</template>
+```
 
 ## Project setup
 ```

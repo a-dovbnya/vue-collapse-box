@@ -1,17 +1,17 @@
 <template>
-<transition
-  v-on:before-enter="beforeEnter"
-  v-on:enter="transitionEnter"
-  v-on:after-enter="transitionAfterEnter"
-  v-on:before-leave="beforeLeave"
-  v-on:leave="transitionLeave"
->
-  <div v-show="open" class="collapse-content">
-    <div>
-      <slot></slot>
+  <transition
+    v-on:before-enter="beforeEnter"
+    v-on:enter="transitionEnter"
+    v-on:after-enter="transitionAfterEnter"
+    v-on:before-leave="beforeLeave"
+    v-on:leave="transitionLeave"
+  >
+    <div v-show="open" class="collapse-content">
+      <div>
+        <slot></slot>
+      </div>
     </div>
-  </div>
-</transition>
+  </transition>
 </template>
 
 <script>
