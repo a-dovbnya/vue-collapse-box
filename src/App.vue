@@ -4,7 +4,7 @@
       <div class="collapse-block__head" @click="isActive = !isActive">
         Header
       </div>
-      <collapse-box :open="isActive" :duration="0.75" timingFunction="linear">
+      <collapse-box :open="isActive" :duration="0.25" timingFunction="ease">
         <div class="collapse-block__body">
           Some Content
         </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CollapseBox from './components/CollapseBox'
+import { CollapseBox } from './components/'
 
 export default {
   name: 'app',
