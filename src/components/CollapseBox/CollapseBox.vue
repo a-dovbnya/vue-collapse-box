@@ -54,6 +54,9 @@ export default {
       el.style.overflow = 'hidden'
     },
     transitionLeave (el, done) {
+      /**
+       * Если не обратиться к css-свойству, то блок схлопнется мгновенно
+       */
       const duration = parseFloat(getComputedStyle(el).transitionDuration) * 1000 || 250
 
       el.style.maxHeight = 0

@@ -1,7 +1,7 @@
 # vue-collapse-box
-Компонент collapse-box используется для анимационного открытия скрытого блока
+This is vue component, which the use for toggle box with slide effect
 
-## Пример
+## Usage
 ```
 <template>
     <collapse-box :open="isActive" :duration="0.75">
