@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     collapseStyles () {
-      const duration = this.duration || '0.25'
+      const duration = this.duration || '0.20'
       const timingFunction = this.timingFunction || 'linear'
 
       return (
