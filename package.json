@@ -1,8 +1,14 @@
 {
   "name": "vue-collapse-box",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "author": "Aleksey Dovbnya <custos11@gmail.com>",
+  "description": "Vue collapse wrapper",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-dovbnya/vue-collapse-box.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name collapse-box src/index.js",
