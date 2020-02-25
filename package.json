@@ -1,6 +1,6 @@
 {
   "name": "vue-collapse-box",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "author": "Aleksey Dovbnya <custos11@gmail.com>",
   "description": "Vue collapse wrapper",
