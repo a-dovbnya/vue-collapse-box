@@ -2,12 +2,12 @@
   <div id="app">
     <div class="collapse-block">
       <div class="collapse-block__head" @click="isActive = !isActive">
-        Header
+        ToggleCollapse
       </div>
-      <collapse-box :open="isActive" :duration="0.25" timingFunction="ease">
-        <div class="collapse-block__body">
-          Some Content
-        </div>
+      <collapse-box :open="isActive" :duration="0.25" timingFunction="linear" class="collapse-block__body">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae rem, non excepturi officiis repellat consequuntur vel, obcaecati molestias veniam incidunt voluptas aperiam ea, quas dolore delectus temporibus molestiae? Voluptatibus, placeat!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae rem, non excepturi officiis repellat consequuntur vel, obcaecati molestias veniam incidunt voluptas aperiam ea, quas dolore delectus temporibus molestiae? Voluptatibus, placeat!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae rem, non excepturi officiis repellat consequuntur vel, obcaecati molestias veniam incidunt voluptas aperiam ea, quas dolore delectus temporibus molestiae? Voluptatibus, placeat!</p>
       </collapse-box>
     </div>
   </div>
@@ -38,15 +38,28 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.collapse-block {
-  border: 1px solid black;
-}
+
 .collapse-block__head {
-  padding: 20px;
-  border: 1px solid blue;
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #1616b7;
+  background: #4040ca;
+  color: white;
+  transition: .2s ease;
+}
+.collapse-block__head:hover {
+  background: #5050f7;
 }
 .collapse-block__body {
   padding: 20px;
-  border: 1px solid red;
+  width: 500px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-align: left;
 }
+
 </style>
